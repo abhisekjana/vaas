@@ -1,9 +1,0 @@
-{"$or": [
-    {
-        "MY HEALTHEVET PERSONAL INFORMATION REPORT.Name": {
-            "$regex": ".*one.*",
-            "$options": "i"
-        }
-    }
-], "_id": {
-    "$in": ["ObjectId('5274a6b468904e0c29000001')","ObjectId('5274a6c168904e0c29000002')"]}}
