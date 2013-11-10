@@ -1,0 +1,35 @@
+{
+    "name": "MetlifeVAWALL",
+    "version": "0.2.0",
+    "author": "Cog++",
+    "description": "Application Created for MetLife TechJam by Cognizant Team",
+    "contributors": [
+        {
+            "name": "Sujay , Abhisek , Neel , Aswani, Bishu",
+            "org": "Cognizant , Metlife "
+        }
+    ],
+    "main": "./server.js",
+    "keywords": [
+        "azure",
+        "boilerplate",
+        "express"
+    ],
+    "dependencies": {
+        "ejs": "*",
+        "express": "*",
+        "mongodb": "*",
+        "passport":"*",
+        "passport-local":"*",
+        "mongoose":"*",
+        "debug":"*",
+        "bcrypt-nodejs":"*",
+        "sanitizer":"*",
+        "string":"*"
+    },
+    "noAnalyze": true,
+    "license": "Apache",
+    "engines": {
+        "node": ">=0.6.14"
+    }
+}

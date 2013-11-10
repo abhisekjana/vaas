@@ -1,0 +1,21 @@
+{
+    "app": {
+        "port": 3000,
+
+        "auth": {
+            "SALT_WORK_FACTOR": 10,
+
+            "db": {
+                "host": "cogppmongo.cloudapp.net",
+                "port": 27017,
+                "name": "va_wall"
+            }
+        }
+    },
+    "db": {
+        "host": "cogppmongo.cloudapp.net",
+        "port": 27017,
+        "name": "va_wall"
+    }
+
+}

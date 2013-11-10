@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetLife - VA Wall</title>
+    <!-- STYLES: BOOTSTRAPS -->
+    <link type="text/css" href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- STYLES: THEMES -->
+    <link type="text/css" href="/css/blue-theme.css" rel="stylesheet">
+    <link type="text/css" href="/css/fullcalendar.css" rel="stylesheet">
+    <link type="text/css" href="/css/fullcalendar.print.css" rel="stylesheet">
+    <link type="text/css" href="/css/style.css" rel="stylesheet">
+    <link type="text/css" href="/css/theme-responsive-767.css" rel="stylesheet">
+    <link type="text/css" href="/css/theme-responsive-768-979.css" rel="stylesheet">
+    <!--FONTS-->
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
+          rel='stylesheet'>
+</head>
+<body>
+<div class="navbar navbar-fixed-top header">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <i class="icon-reorder shaded"></i>
+            </a>
+
+            <a class="brand" href="#">
+                Metlife VA Wall
+            </a>
+
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <form class="navbar-search pull-left input-append" action="">
+                    <input type="text" class="span3" placeholder="Enter Keywords" id="txtSearch">
+                    <button class="btn" type="button" id="bttnSearch">
+                        Search
+                    </button>
+
+                    <div class="search-result" style="background: #fff">
+
+
+                    </div>
+
+                </form>
+
+                <ul class="nav pull-right">
+                    <li class="nav-user dropdown text-menu-white">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Upload<i class="icon-upload icon-white"></i>
+
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form action="/upload" method="post" enctype="multipart/form-data">
+                                    <input type="file" name="ccda">
+                                    <input type="submit" value="Upload">
+                                </form>
+                        </ul></li>
+                    <li class="text-menu-white"><a href="#">
+                        Help
+                    </a></li>
+                    <li class="nav-user dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="" class="nav-avatar" />
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span style="color:#000">Your Profile</span></a></li>
+                            <li><a href="#"><span style="color:#000">Edit Profile</span></a></li>
+                            <li><a href="#"><span style="color:#000">Account Settings</span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><span style="color:#000">Sign Out</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.nav-collapse -->
+        </div>
+    </div><!-- /navbar-inner -->
+</div><!-- /navbar -->
+
+
+
+
+<div class="wrapper" style='display:<%=show%>'>
+<div class="container">
+<div class="row">
+    <div class="span3">
+        <!-- Panel -->
+        <div class="widget widget-usage pad5 module-cards" id="demo1">
+
+        </div>
+        <!-- Panel -->
+        <!-- Widget -->
+
+
+    </div>
+    <div class="span3">
+        <!-- Panel -->
+        <div class="module module-cards">
+            <div class="module-head">
+                <h3>App Tray</h3>
+            </div>
+            <div class="module-body clearfix">
+                <div class="" >
+                    <a href="#" class="callGraph" style="margin:0 auto;text-align: center">
+                        <span class="label label-success" style="color:#fff"><b>Analyze your Health</b></span>
+                    </a>
+                    <a href="#" >
+                        <span class="label label-primary"><b>Manage Your Care</b></span>
+                    </a>
+                    <a href="#" >
+                        <span class="label label-primary"><b>Appointment Calendar</b></span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Panel -->
+        <!-- Widget -->
+
+
+    </div>
+    <div class="span3">
+        <!-- Panel -->
+        <div class="module module-cards">
+            <div class="module-head">
+                <h3>Upcoming Appointments</h3>
+            </div>
+            <div class="module-body" id="appRA">
+
+
+            </div>
+        </div>
+        <!-- Panel -->
+        <!-- Widget -->
+
+
+    </div>
+    <div class="span3">
+        <!-- Panel -->
+        <div class="module module-cards">
+            <div class="module-head">
+                <h3>Military Service History</h3>
+            </div>
+            <div class="module-body" id="appMHH"></div>
+        </div>
+        <!-- Panel -->
+        <!-- Widget -->
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="span3">
+        <div class="sidebar">
+            <ul class="widget widget-menu unstyled">
+                <li class="active" id="mnuHealthCareProviders">
+                    <a href="#" >
+                        <i class="menu-icon icon-bullhorn"></i>
+                        Health Care Providers
+                        <b class="label green pull-right">26</b>
+                        <b class="label orange pull-right">12</b>
+                    </a>
+                </li>
+                <li id="mnuTF">
+                    <a href="# ">
+                        <i class="menu-icon icon-bullhorn"></i>
+                        Treatment Facilities
+                        <b class="label green pull-right">26</b>
+                        <b class="label orange pull-right">12</b>
+                    </a>
+                </li>
+                <li id="mnuHI">
+                    <a href="#">
+                        <i class="menu-icon icon-inbox"></i>
+                        Health Insurance
+                        <b class="label green pull-right">26</b>
+                        <b class="label orange pull-right">12</b>
+                    </a>
+                </li>
+                <li>
+                    <a class="collapsed" data-toggle="collapse" href="#accord1">
+                        <i class="menu-icon icon-eye-open"></i>
+                        <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+                        Medical History
+                    </a>
+                    <ul id="accord1" class="collapse unstyled">
+                        <li id="mnuVAMH">
+                            <a href="#">
+                                <i class="icon-inbox"></i>
+                                VA Medication History
+                            </a>
+                        </li>
+                        <li id="mnuMS">
+                            <a href="#">
+                                <i class="icon-inbox"></i>
+                                Medications & Supplements
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="collapsed" data-toggle="collapse" href="#accord2">
+                        <i class="menu-icon icon-eye-open"></i>
+                        <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+                        Allergies
+                    </a>
+                    <ul id="accord2" class="collapse unstyled">
+                        <li id="mnuVAA">
+                            <a href="#">
+                                <i class="icon-inbox"></i>
+                                VA Allergies
+                            </a>
+                        </li>
+                        <li id="mnuOA">
+                            <a href="#">
+                                <i class="icon-inbox"></i>
+                                Other Allergies
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="mnuIMMU">
+                    <a href="#">
+                        <i class="menu-icon icon-inbox"></i>
+                        Immunisation
+                        <b class="label green pull-right">26</b>
+                        <b class="label orange pull-right">12</b>
+                    </a>
+                </li>
+                <li>
+                    <a class="collapsed" data-toggle="collapse" href="#accord3">
+                        <i class="menu-icon icon-eye-open"></i>
+                        <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+                        Lab &amp; Tests
+                    </a>
+                    <ul id="accord3" class="collapse unstyled">
+                        <li id="mnuLabs">
+                            <a href="#">
+                                <i class="icon-inbox"></i>
+                                Lab Results
+                            </a>
+                        </li>
+                        <li id="mnuLT">
+                            <a href="#">
+                                <i class="icon-inbox"></i>
+                                Labs &amp; Tests
+                            </a>
+                        </li>
+                        <li id="mnuVR">
+                            <a href="#">
+                                <i class="icon-inbox"></i>
+                                Vitals &amp; Readings
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="mnuFHH">
+                    <a href="#">
+                        <i class="menu-icon icon-inbox"></i>
+                        Family Health History
+                        <b class="label green pull-right">26</b>
+                        <b class="label orange pull-right">12</b>
+                    </a>
+                </li>
+                <!--/.widget-nav--></ul>
+        </div>
+    </div>
+    <div class="span9">
+        <div class="content" id="container">
+
+
+
+
+
+
+        </div>
+        <!-- Modal -->
+        <div id="graphModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="position:absolute;" aria-hidden="true">
+            <div class="modal-header">
+                <h3 id="myModalLabel" style="text-align:center;color:#274B6D;">Analyze your Health</h3>
+                <span id="graphDropDown"></span>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+
+            </div>
+            <div class="modal-body" id="graphContainer">
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+        <!-- Modal -->
+    </div>
+</div>
+</div>
+<!--/.container-->
+</div>
+<!--/.wrapper-->
+
+<!--<div class="footer">
+    <div class="container">
+        <ul class="nav pull-right">
+            <li class="active"><a href="#">
+                Documentation
+            </a></li>
+            <li><a href="#">
+                Help
+            </a></li>
+            <li><a href="#">
+                Report
+            </a></li>
+            <li><a href="#">
+                Like us on Facebook
+            </a></li>
+            <li><a href="#">
+                Follow us on Twitter
+            </a></li>
+        </ul>
+    </div>
+</div>-->
+
+<!-- SCRIPTS: BASE -->
+<script src="scripts/jquery-1.9.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="scripts/handlebars.js"></script>
+<script src="scripts/moment.min.js"></script>
+<script src="scripts/custom/common.js"></script>
+<script src="scripts/fullcalendar.min.js"></script>
+<script src="scripts/gcal.js"></script>
+<script src="scripts/custom/index.html.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+
+<script type="text/x-handlebars-template" id="tmplHEALTH_CARE_PROVIDERS">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Health Care Providers</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Providers}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <a href="#" class="media-avatar medium pull-left">
+                    <img src="images/samples/phone.png">
+                </a>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Provider Name]}}
+                            <small>{{[Type of Provider]}} </small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Phone Number:</span> {{[Phone Number]}} X {{Ext}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Email :</span> {{Email}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="tmplTREATMENT_FACILITIES">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Treatment Facilities</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Facilities}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <a href="#" class="media-avatar medium pull-left">
+                    <img src="images/samples/phone.png">
+                </a>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Facility Name]}}
+                            <small>{{[Facility Type]}} </small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold"> Address:</span>
+                                <span>{{[Mailing Address]}}
+                                {{[Mailing Address2]}}
+                                {{[Mailing City]}}
+                                {{[Mailing State]}}-{{[Mailing Zip/Postal Code]}}
+                                {{[Mailing Country]}}
+                                {{[Phone Number]}} X {{Ext}}
+                                </span>
+
+                                </div>
+                                <div class="span3">
+                                    <img onclick='javascript:window.open('https://maps.google.com/maps?f=q&source=s_q&hl=en&layer=c&geocode=&q={{[Mailing Address]}}
+                                    {{[Mailing Address2]}}&nbsp;
+                                    {{[Mailing City]}}&nbsp;
+                                    {{[Mailing State]}}&nbsp;{{[Mailing Zip/Postal Code]}}&nbsp;
+                                    {{[Mailing Country]}}' src="images/custom/map.png" style='cursor:pointer'></img>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+
+<script type="text/x-handlebars-template" id="tmplHI">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Health Insurance</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Companies}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <a href="#" class="media-avatar medium pull-left">
+                    <img src="images/samples/phone.png">
+                </a>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Health Insurance Company]}}
+                            <small>{{[Type of Provider]}} </small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Primary Insurance Provider:</span> {{[Primary Insurance Provider]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >ID Number :</span> {{[ID Number]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Group Number:</span> {{[Group Number]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Insured :</span> {{[Insured]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Start Date:</span> {{[Start Date]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Stop Date :</span> {{[Stop Date]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Pre-Approval Phone Number:</span> {{[Pre-Approval Phone Number]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Company Phone Number :</span> {{[Health Insurance Company Phone Number]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+
+<script type="text/x-handlebars-template" id="tmplVAMH">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>VA Medication History</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Medications}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <div class="example-date ">
+                    <span class="day">{{getDate [Last Filled On]}}</span>
+                    <span class="month">{{getMonth [Last Filled On]}}</span>
+                    <span class="year">{{getYear [Last Filled On]}}</span>
+                </div>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Medication]}}
+                            <small>{{[Status]}} </small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Initially Ordered On:</span> {{[Initially Ordered On]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Prescription Number :</span> {{[Prescription Number]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Refills Remaining:</span> {{[Refills Remaining]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Insured :</span> {{[Insured]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Quantity:</span> {{[Quantity]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Days Supply :</span> {{[Days Supply]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Pharmacy:</span> {{[Pharmacy]}}</div>
+
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Instructions:</span> {{Instructions}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="tmplMS">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Medications & Supplements</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Medications}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <div class="example-date ">
+                    <span class="day">{{getDate [Start Date]}}</span>
+                    <span class="month">{{getMonth [Start Date]}}</span>
+                    <span class="year">{{getYear [Start Date]}}</span>
+                </div>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Drug Name]}}
+                            <small>{{[Category]}}-{{[Strength]}} </small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Prescription Number:</span> {{[Prescription Number]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Dose :</span> {{[Dose]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Frequency:</span> {{[Frequency]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Start Date:</span> {{[Start Date]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Stop Date :</span> {{[Stop Date]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Pharmacy Name:</span> {{[Pharmacy Name]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Pharmacy Phone :</span> {{[Pharmacy Phone]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Reason for taking:</span> {{[Reason for taking]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Instructions:</span> {{Instructions}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+
+<script type="text/x-handlebars-template" id="tmplVAA">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Allergies</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Allergies}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <div class="example-date ">
+                    <span class="day">{{getDate [Date Entered]}}</span>
+                    <span class="month">{{getMonth [Date Entered]}}</span>
+                    <span class="year">{{getYear [Date Entered]}}</span>
+                </div>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Allergy Name]}}
+                            <small></small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Reaction:</span> {{[Reaction]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Location:</span> {{[Location]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Allergy Type:</span> {{[Allergy Type]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >VA Drug Class:</span> {{[VA Drug Class]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Observed/Historical :</span> {{[Observed/Historical]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="tmplOA">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Other Allergies</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Allergies}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <div class="example-date ">
+                    <span class="day">{{getDate [Date]}}</span>
+                    <span class="month">{{getMonth [Date]}}</span>
+                    <span class="year">{{getYear [Date]}}</span>
+                </div>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Allergy Name]}}
+                            <small>{{[Severity]}}</small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Diagnosed:</span> {{[Diagnosed]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Reaction :</span> {{[Reaction]}}</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="tmplIMMU">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Immunizations</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Immunizations}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <div class="example-date ">
+                    <span class="day">{{getDate [Date Received]}}</span>
+                    <span class="month">{{getMonth [Date Received]}}</span>
+                    <span class="year">{{getYear [Date Received]}}</span>
+                </div>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Immunization]}}
+                            <small></small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Method:</span> {{[Method]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Reactions :</span> {{[Reactions]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Other:</span> {{[Other]}}</div>
+
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="tmplLabs">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Lab Results</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Labs}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <div class="example-date ">
+                    <span class="day">{{getDate [Date/Time Collected]}}</span>
+                    <span class="month">{{getMonth [Date/Time Collected]}}</span>
+                    <span class="year">{{getYear [Date/Time Collected]}}</span>
+                </div>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Lab Test]}}
+                            <small>{{[Status]}}</small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Lab Type:</span> {{[Lab Type]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Specimen :</span> {{[Specimen]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Ordering Provider:</span> {{[Ordering Provider]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Ordering Location :</span> {{[Ordering Location]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Date/Time Collected:</span> {{[Date/Time Collected]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Test Name :</span> {{[Test Name]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Result:</span> {{[Result]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Units :</span> {{[Units]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Reference Range:</span> {{[Reference Range]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Interpretation :</span> {{[Interpretation]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Performing Location:</span> {{[Performing Location]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >ANTICOAGULANT :</span> {{[ANTICOAGULANT]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="tmplLT">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Lab &amp; Test</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Labs}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <div class="example-date ">
+                    <span class="day">{{getDate [Date]}}</span>
+                    <span class="month">{{getMonth [Date]}}</span>
+                    <span class="year">{{getYear [Date]}}</span>
+                </div>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Test Name]}}
+                            <small></small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Location performed:</span> {{[Location performed]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Provider :</span> {{[Provider]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Results:</span> {{[Results]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="tmplVR">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Vitals &amp; Readings</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Reading}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <div class="example-date ">
+                    <span class="day">{{getDate [Date]}}</span>
+                    <span class="month">{{getMonth [Date]}}</span>
+                    <span class="year">{{getYear [Date]}}</span>
+                </div>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Measurement Type]}}
+                            <small>{{[Date]}}&nbsp;&nbsp;-&nbsp;&nbsp;{{formatTime [Time]}}</small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Systolic:</span> {{[Systolic]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Diastolic :</span> {{[Diastolic]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+<script type="text/x-handlebars-template" id="tmplFHH">
+    <div class="module  clearfix">
+        <div class="module-head">
+            <h3>Family Health History</h3>
+        </div>
+        <div class="module-body clearfixx">
+            {{#each Relation}}
+            <div class="media stream well" style="margin-left: 10px;margin-right: 10px;">
+                <a href="#" class="media-avatar medium pull-left">
+                    <img src="images/samples/phone.png">
+                </a>
+                <div class="media-body">
+                    <div class="stream-headline">
+                        <h5 class="stream-author">
+                            {{[Relationship]}}
+                            <small>{{[Living or Deceased]}}</small>
+                        </h5>
+                        <div class="stream-text">
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >First Name:</span> {{[First Name]}}</div>
+                                <div class="span3"><span style="font-weight: bold" >Last Name :</span> {{[Last Name]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Health Issues:</span> {{[First Name]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span3"><span style="font-weight: bold" >Other Health Issues:</span> {{[Other Health Issues]}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="span6"><span style="font-weight: bold" >Comments:</span> {{Comments}}</div>
+                            </div>
+                        </div>
+                    </div><!--/.stream-headline-->
+                </div>
+            </div><!--/.media .stream-->
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</script>
+
+
+<script type="text/x-handlebars-template" id="tmplSearch">
+    <ul>
+        {{#each response}}
+        <li>
+            {{[MY HEALTHEVET PERSONAL INFORMATION REPORT.Name]}}&nbsp;&nbsp;-{{[MY HEALTHEVET PERSONAL INFORMATION REPORT.Date of Birth]}}
+        </li>
+        {{/each}}
+    </ul>
+</script>
+
+
+<script type="text/x-handlebars-template" id="tmplRA">
+    <div class="row">
+        <div class="example-date ">
+            <span class="day">{{getDate [Date/Time]}}</span>
+            <span class="month">{{getMonth [Date/Time]}}</span>
+            <span class="year">{{getYear [Date/Time]}}</span>
+        </div>
+        <div class="span2"><span style="font-weight: bold" >Date/Time:</span> {{[Date/Time]}}</div>
+        <div class="span2"><span style="font-weight: bold" >Location :</span> {{[Location]}}</div>
+        <div class="span2"><span style="font-weight: bold" >Status :</span> {{[Status]}}</div>
+        <div class="span2"><span style="font-weight: bold" >Clinic :</span> {{[Clinic]}}</div>
+        <div class="span2"><span style="font-weight: bold" >Type :</span> {{[Type]}}</div>
+    </div>
+</script>
+
+<script type="text/x-handlebars-template" id="tmplMHH">
+    <div class="row">
+        <div class="example-date ">
+            <span class="day">{{getDate [Event Date]}}</span>
+            <span class="month">{{getMonth [Event Date]}}</span>
+            <span class="year">{{getYear [Event Date]}}</span>
+        </div>
+        <div class="span2"><span style="font-weight: bold" >Event Title:</span> {{[Event Title]}}</div>
+        <div class="span2"><span style="font-weight: bold" >Assignment :</span> {{[Assignment]}}</div>
+        <div class="span2"><span style="font-weight: bold" >Rank :</span> {{[Rank]}}</div>
+        <div class="span2"><span style="font-weight: bold" >Service Branch :</span> {{[Service Branch]}}</div>
+    </div>
+</script>
+
+
+<script type="text/x-handlebars-template" id="tmplDemo1">
+    <h3>{{[First Name]}}&nbsp;{{[Middle Initial]}}&nbsp;{{[Last Name]}}</h3>
+    <p><img src=""></img></p>
+
+    <!-- <div class="table-row">
+    <div class="profile-left">First Name :</div>
+    <div class="profile-right">asd</div>
+    </div>
+     -->
+    <address>
+        {{[Mailing or Destination Address]}}&nbsp;{{[Mailing or Destination Address2]}}<br>
+        {{[Mailing or Destination City]}},}&nbsp;{{[Mailing or Destination State]}}&nbsp; {{[Mailing or Destination Zip/Postal]}}<br>
+        <abbr title="Phone">P:</abbr> {{[Home Phone Number]}}
+    </address>
+    <address>
+
+        <a href="mailto:#">{{[Email Address]}}</a>
+    </address>
+
+</script>
+
+</body>
+</html>

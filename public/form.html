@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>APanel</title>
+	<!-- STYLES: BOOTSTRAPS -->
+	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<!-- STYLES: THEMES -->
+	<link type="text/css" href="css/theme.css" rel="stylesheet">
+	<link type="text/css" href="css/theme-responsive-767.css" rel="stylesheet">
+	<link type="text/css" href="css/theme-responsive-768-979.css" rel="stylesheet">
+	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+	<!-- REDACTOR EDITOR -->
+	<link rel="stylesheet" href="scripts/redactor/redactor.css" />
+	<!--FONTS-->
+	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+</head>
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+					<i class="icon-reorder shaded"></i>
+				</a>
+
+			  	<a class="brand" href="#">
+			  		AdminPro
+			  	</a>
+
+				<div class="nav-collapse collapse navbar-inverse-collapse">
+					<ul class="nav nav-icons">
+						<li class="active"><a href="#">
+							<i class="icon-group shaded"></i>
+						</a></li>
+						<li><a href="#">
+							<i class="icon-inbox shaded"></i>
+						</a></li>
+						<li><a href="#">
+							<i class="icon-tasks shaded"></i>
+						</a></li>
+					</ul>
+
+					<form class="navbar-search pull-left input-append" action="">
+						<input type="text" class="span3">
+						<button class="btn" type="button">
+							<i class="icon-search"></i>
+						</button>
+					</form>
+				
+					<ul class="nav pull-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li class="nav-header">Nav header</li>
+								<li><a href="#">Separated link</a></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li>
+						<li><a href="#">
+							Help
+						</a></li>
+						<li><a href="#">
+							Report
+						</a></li>
+						<li class="nav-user dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<img src="images/samples/user.png" class="nav-avatar" />
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Your Profile</a></li>
+								<li><a href="#">Edit Profile</a></li>
+								<li><a href="#">Account Settings</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Sign Out</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.nav-collapse -->
+			</div>
+		</div><!-- /navbar-inner -->
+	</div><!-- /navbar -->
+
+
+
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="span3">
+					<div class="sidebar">
+
+						<ul class="widget widget-menu unstyled">
+							<li class="active">
+								<a href="index.html">
+									<i class="menu-icon icon-dashboard"></i>
+									Dashboard
+								</a>
+							</li>
+							<li>
+								<a href="activity.html">
+									<i class="menu-icon icon-bullhorn"></i>
+									Activity Stream
+								</a>
+							</li>
+							<li>
+								<a href="message.html">
+									<i class="menu-icon icon-inbox"></i>
+									Message
+									<b class="label green pull-right">26</b>
+								</a>
+							</li>
+							
+							<li>
+								<a href="task.html">
+									<i class="menu-icon icon-tasks"></i>
+									Tasks
+									<b class="label orange pull-right">19</b>
+								</a>
+							</li>
+						</ul><!--/.widget-nav-->
+
+						<ul class="widget widget-menu unstyled">
+							<li>
+								<a class="collapsed" data-toggle="collapse" href="#accord1">
+									<i class="menu-icon icon-eye-open"></i>
+									<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+									UI Elements
+								</a>
+								<ul id="accord1" class="collapse unstyled">
+									<li>
+										<a href="ui-button-icon.html">
+											<i class="icon-inbox"></i>
+											Buttons & Icons
+										</a>
+									</li>
+									<li>
+										<a href="ui-typography.html">
+											<i class="icon-inbox"></i>
+											Typography
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="form.html">
+									<i class="menu-icon icon-paste"></i>
+									Forms
+								</a>
+							</li>
+							<li>
+								<a href="table.html">
+									<i class="menu-icon icon-table"></i>
+									Data Table
+								</a>
+							</li>
+							<li>
+								<a href="charts.html">
+									<i class="menu-icon icon-bar-chart"></i>
+									Charts
+								</a>
+							</li>
+						</ul><!--/.widget-nav-->
+
+						<ul class="widget widget-menu unstyled">
+							<li>
+								<a class="collapsed" data-toggle="collapse" href="#togglePages">
+									<i class="menu-icon icon-cog"></i>
+									<i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+									Other Pages
+								</a>
+								<ul id="togglePages" class="collapse unstyled">
+									<li>
+										<a href="other-login.html">
+											<i class="icon-inbox"></i>
+											Login
+										</a>
+									</li>
+									<li>
+										<a href="other-user-profile.html">
+											<i class="icon-inbox"></i>
+											User Profile
+										</a>
+									</li>
+									<li>
+										<a href="other-user-listing.html">
+											<i class="icon-inbox"></i>
+											User Listing
+										</a>
+									</li>
+								</ul>
+							</li>
+							
+							<li>
+								<a href="#">
+									<i class="menu-icon icon-signout"></i>
+									Sign Out
+								</a>
+							</li>
+						</ul>
+
+						<ul class="widget widget-usage unstyled">
+							<li>
+								<p>
+									<strong>Domain</strong>
+									<span class="pull-right small muted">2 / 10 domains</span>
+								</p>
+								<div class="progress tight">
+									<div class="bar" style="width: 20%;"></div>
+								</div>
+							</li>
+
+							<li>
+								<p>
+									<strong>Space</strong>
+									<span class="pull-right small muted">1.82 MB / 5 MB</span>
+								</p>
+								<div class="progress tight">
+									<div class="bar bar-success" style="width: 36%;"></div>
+								</div>
+							</li>
+
+							<li>
+								<p>
+									<strong>Email</strong>
+									<span class="pull-right small muted">6.5 G / 12 G</span>
+								</p>
+								<div class="progress tight">
+									<div class="bar bar-warning" style="width: 50%;"></div>
+								</div>
+							</li>
+
+							<li>
+								<p>
+									<strong>Spending</strong>
+									<span class="pull-right small muted">$ 35,000 / $ 35,000</span>
+								</p>
+								<div class="progress tight">
+									<div class="bar bar-danger" style="width: 100%;"></div>
+								</div>
+							</li>
+						</ul>
+
+						<div class="widget">
+							<!-- Button to trigger modal -->
+							<a href="#myModal" role="button" class="btn btn-large btn-primary btn-block" data-toggle="modal">Launch modal</a>
+
+							<!-- Modal -->
+							<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+									<h3 id="myModalLabel">Modal header</h3>
+								</div>
+								<div class="modal-body">
+									<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+									<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+									<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+									<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+									<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+								</div>
+								<div class="modal-footer">
+									<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+									<button class="btn btn-primary">Save changes</button>
+								</div>
+							</div>
+							<!-- Modal -->
+						</div>
+
+						<hr class="widget-divider hidden-desktop">
+					</div><!--/.sidebar-->
+				</div><!--/.span3-->
+
+
+				<div class="span9">
+					<div class="content">
+
+						<div class="module">
+							<div class="module-head">
+								<h3>Forms</h3>
+							</div>
+							<div class="module-body">
+
+									<div class="alert">
+										<button type="button" class="close" data-dismiss="alert">×</button>
+										<strong>Warning!</strong> Best check yo self, you're not looking too good.
+									</div>
+									<div class="alert alert-error">
+										<button type="button" class="close" data-dismiss="alert">×</button>
+										<strong>Oh snap!</strong> Change a few things up and try submitting again. 
+									</div>
+									<div class="alert alert-success">
+										<button type="button" class="close" data-dismiss="alert">×</button>
+										<strong>Well done!</strong> You successfully read this important alert message. 
+									</div>
+
+									<br />
+
+									<form class="form-horizontal row-fluid">
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Basic Input</label>
+											<div class="controls">
+												<input type="text" id="basicinput" placeholder="Type something here..." class="span8">
+												<span class="help-inline">Helpful text here.</span>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Disabled Input</label>
+											<div class="controls">
+												<input type="text" id="basicinput" placeholder="You can't type something here..." class="span8" disabled>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Tooltip Input</label>
+											<div class="controls">
+												<input data-title="A tooltip for the input" type="text" placeholder="Hover to view the tooltip…" data-original-title="" class="span8 tip">
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Prepended Input</label>
+											<div class="controls">
+												<div class="input-prepend">
+													<span class="add-on">#</span><input class="span8" type="text" placeholder="prepend">       
+												</div>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Appended Input</label>
+											<div class="controls">
+												<div class="input-append">
+													<input type="text" placeholder="5.000" class="span8"><span class="add-on">$</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Dropdown Button</label>
+											<div class="controls">
+												<div class="dropdown">
+													<a class="dropdown-toggle btn" data-toggle="dropdown" href="#">Dropdown Button <i class="icon-caret-down"></i></a>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+														<li><a href="#">First Row</a></li>
+														<li><a href="#">Second Row</a></li>
+														<li><a href="#">Third Row</a></li>
+														<li><a href="#">Fourth Row</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Dropdown</label>
+											<div class="controls">
+												<select tabindex="1" data-placeholder="Select here.." class="span8">
+													<option value="">Select here..</option>
+													<option value="Category 1">First Row</option>
+													<option value="Category 2">Second Row</option>
+													<option value="Category 3">Third Row</option>
+													<option value="Category 4">Fourth Row</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label">Radiobuttons</label>
+											<div class="controls">
+												<label class="radio">
+													<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+													Option one
+												</label> 
+												<label class="radio">
+													<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+													Option two
+												</label> 
+												<label class="radio">
+													<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+													Option three
+												</label>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label">Inline Radiobuttons</label>
+											<div class="controls">
+												<label class="radio inline">
+													<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+													Option one
+												</label> 
+												<label class="radio inline">
+													<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+													Option two
+												</label> 
+												<label class="radio inline">
+													<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+													Option three
+												</label>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label">Checkboxes</label>
+											<div class="controls">
+												<label class="checkbox">
+													<input type="checkbox" value="">
+													Option one
+												</label>
+												<label class="checkbox">
+													<input type="checkbox" value="">
+													Option two
+												</label>
+												<label class="checkbox">
+													<input type="checkbox" value="">
+													Option three
+												</label>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label">Inline Checkboxes</label>
+											<div class="controls">
+												<label class="checkbox inline">
+													<input type="checkbox" value="">
+													Option one
+												</label>
+												<label class="checkbox inline">
+													<input type="checkbox" value="">
+													Option two
+												</label>
+												<label class="checkbox inline">
+													<input type="checkbox" value="">
+													Option three
+												</label>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Textarea</label>
+											<div class="controls">
+												<textarea class="span8" rows="5"></textarea>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<div class="controls">
+												<button type="submit" class="btn">Submit Form</button>
+											</div>
+										</div>
+									</form>
+							</div>
+						</div>
+
+						<div class="module">
+							<div class="module-head">
+								<h3>Form - Input State</h3>
+							</div>
+							<div class="module-body">
+								<form class="form-horizontal">
+									<div class="control-group error">
+										<label class="control-label">Error state</label>
+										<div class="controls">
+										<input type="text" class="error">
+										<span class="help-inline"><code>class="error"</code></span>
+										</div>
+									</div>
+
+									<div class="control-group warning">
+										<label class="control-label">Warning state</label>
+										<div class="controls">
+										<input type="text" class="warning">
+										<span class="help-inline"><code>class="warning"</code></span>
+										</div>
+									</div>
+									<div class="control-group success">
+										<label class="control-label">Success state</label>
+										<div class="controls">
+										<input type="text" class="success">
+										<span class="help-inline"><code>class="success"</code></span>
+										</div>
+									</div>
+									<div class="control-group info">
+										<label class="control-label">Info state</label>
+										<div class="controls">
+										<input type="text" class="info">
+										<span class="help-inline"><code>class="info"</code></span>
+										</div>
+									</div>
+									<div class="control-group disabled">
+										<label class="control-label">Disabled state</label>
+										<div class="controls">
+										<input type="text" disabled="disabled">
+										<span class="help-inline"><code>input disabled="disabled"</code></span>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+
+						<div class="module">
+							<div class="module-head">
+								<h3>WYSIWYG Editor</h3>
+							</div>
+							<div class="module-body">
+									<form class="form-horizontal row-fluid">
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Textarea</label>
+											<div class="controls">
+												<textarea class="span8" rows="5" id="redactor">
+													<h2>Hello and Welcome</h2>
+													<p>Lorem ipsum <a href="http://test.com" title="dolor">dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing <b>elit, sed do eiusmod tempor incididunt</b> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+												</textarea>
+											</div>
+										</div>
+
+										<div class="control-group">
+											<div class="controls">
+												<button type="submit" class="btn">Submit Form</button>
+											</div>
+										</div>
+									</form>
+							</div>
+						</div>
+						
+					</div><!--/.content-->
+				</div><!--/.span9-->
+			</div>
+		</div><!--/.container-->
+	</div><!--/.wrapper-->
+
+	<div class="footer">
+		<div class="container">
+			<ul class="nav pull-right">
+				<li class="active"><a href="#">
+					Documentation
+				</a></li>
+				<li><a href="#">
+					Help
+				</a></li>
+				<li><a href="#">
+					Report
+				</a></li>
+				<li><a href="#">
+					Like us on Facebook
+				</a></li>
+				<li><a href="#">
+					Follow us on Twitter
+				</a></li>
+			</ul>
+
+			<b class="copyright">&copy; 2013 AdminPro</b> All rights reserved.
+		</div>
+	</div>
+
+	<!-- SCRIPTS: BASE -->
+	<script src="scripts/jquery-1.9.1.min.js"></script>
+	<script src="scripts/jquery-ui-1.10.1.custom.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- SCRIPTS: FLOT  -->
+	<script src="scripts/flot/jquery.flot.js"></script>
+
+	<!-- SCRIPTS: REDACTOR -->
+	<script src="scripts/redactor/redactor.min.js"></script>
+
+	<!-- SCRIPTS: FLOT GRAPH ADVANCE -->
+	<script type="text/javascript">
+	$(function () {
+
+		if( $("#placeholder2").lenght > 0 ){
+			var d1 = [ [0, 1], [1, 14], [2, 5], [3, 4], [4, 5], [5, 1], [6, 14], [7, 5],  [8, 5] ];
+			var d2 = [ [0, 5], [1, 2], [2, 10], [3, 1], [4, 9],  [5, 5], [6, 2], [7, 10], [8, 8] ];
+
+			var plot = $.plot($("#placeholder2"),
+				   [ { data: d1, label: "Data Y"}, { data: d2, label: "Data X" } ], {
+						lines: { 
+							show: true, 
+							fill: true, /*SWITCHED*/
+							lineWidth: 2 
+						},
+						points: { 
+							show: true, 
+							lineWidth: 5 
+						},
+						grid: {
+							clickable: true,
+							hoverable: true,
+							autoHighlight: true,
+							mouseActiveRadius: 10,
+							aboveData: true,
+							backgroundColor: "#fafafa",
+							borderWidth: 0,
+							minBorderMargin: 25,
+						},
+						colors: [ "#090", "#099",  "#609", "#900"],
+						shadowSize: 0
+					 });
+
+			function showTooltip(x, y, contents) {
+				$('<div id="gridtip">' + contents + '</div>').css( {
+					position: 'absolute',
+					display: 'none',
+					top: y + 5,
+					left: x + 5
+				}).appendTo("body").fadeIn(300);
+			}
+
+			var previousPoint = null;
+			$("#placeholder2").bind("plothover", function (event, pos, item) {
+				$("#x").text(pos.x.toFixed(2));
+				$("#y").text(pos.y.toFixed(2));
+
+				if (item) {
+					if (previousPoint != item.dataIndex) {
+						previousPoint = item.dataIndex;
+						
+						$("#gridtip").remove();
+						var x = item.datapoint[0].toFixed(0),
+							y = item.datapoint[1].toFixed(0);
+						
+						showTooltip(item.pageX, item.pageY,
+									"x : " + x + "&nbsp;&nbsp;&nbsp; y : " + y);
+					}
+				}
+				else {
+					$("#gridtip").remove();
+					previousPoint = null;            
+				}
+			});
+		}
+	});
+	</script>
+
+	<!-- SCRIPTS: DATATABLES -->
+	<script src="scripts/datatables/jquery.dataTables.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Activate dataTable plugin
+			$('.datatable-1').dataTable();
+			$('.dataTables_paginate').addClass("btn-group datatable-pagination");
+			$('.dataTables_paginate > a').wrapInner('<span />');
+			$('.dataTables_paginate > a:first-child').append('<i class="icon-chevron-left shaded"></i>');
+			$('.dataTables_paginate > a:last-child').append('<i class="icon-chevron-right shaded"></i>');
+
+			// Activate redactor editor
+			$('#redactor').redactor({
+				focus: true
+			});
+
+		} );
+	</script>
+	<script>
+	$(function() {
+		$( ".slider-range" ).slider({
+			range: true,
+			min: 0,
+			max: 20000,
+			values: [ 3000, 12000 ],
+			// $(this).find('.ui-slider-handle:first-child').addClass("first-handle");
+			// slide: function( event, ui ) {
+			// 	$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+	  // 		}
+	  // 	
+			slide: function(event, ui) {
+				$(this).find('.ui-slider-handle').attr("title", ui.value);
+			},
+		});
+		$( "#amount" ).val( "$" + $( ".slider-range" ).slider( "values", 0 ) + " - $" + $( ".slider-range" ).slider( "values", 1 ) );
+
+	});
+	</script>
+</body>

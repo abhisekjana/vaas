@@ -1,0 +1,1 @@
+E:\work\utils\mongodb\bin\mongod -dbpath E:\work\utils\mongodb\bin\mongodb\

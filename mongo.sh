@@ -1,0 +1,1 @@
+/Users/abhisekjana/Documents/mongodb/bin/mongod -dbpath /Users/abhisekjana/Documents/mongodb/bin/mongodb
